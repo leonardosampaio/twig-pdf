@@ -409,14 +409,21 @@ $prices = [
     'TPSW4000XLS' => 1564.7475,
     'TPSW4200XLS' => 1067.2805];
 
+    //font download
+    // https://www.wfonts.com/font/garamond
+    //https://stackoverflow.com/questions/24412203/dompdf-and-set-different-font-family/44807562
+    //sudo apt install php7.4-gd
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
 $twig = new \Twig\Environment($loader,[]);
 
 $context = $prices;
-$context['imagePath'] = './images';
+$context['image1'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e60215f190e3fd7f.png'));
+$context['style'] = file_get_contents(__DIR__.'/templates/style.css');
 
+// var_dump($context['style']);die();
 // Generate HTML
-$html = $twig->render('page8.twig', $context);
+$html = $twig->render('page1.twig', $context);
 // var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
@@ -438,7 +445,7 @@ $options->set('enable_remote', true);
 $dompdf = new Dompdf($options);
 // $dompdf->loadHtmlFile('twig.html');
 $dompdf->loadHtml($html);
-$dompdf->setPaper('A4', 'portrait');
+$dompdf->setPaper('letter', 'portrait');
 
 $dompdf->render();
 file_put_contents("output.pdf", $dompdf->output());
