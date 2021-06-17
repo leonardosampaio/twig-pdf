@@ -419,11 +419,13 @@ $twig = new \Twig\Environment($loader,[]);
 $context = $prices;
 $context['image1'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e60215f190e3fd7f.png'));
+$context['image2'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_4efe3888f76de3ce.png'));
 $context['style'] = file_get_contents(__DIR__.'/templates/style.css');
 
 // var_dump($context['style']);die();
 // Generate HTML
-$html = $twig->render('page1.twig', $context);
+$html = $twig->render('page2.twig', $context);
 // var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')

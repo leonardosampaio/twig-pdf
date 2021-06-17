@@ -78,9 +78,9 @@
     'normal' => $fontDir . '/DejaVuSerif',
   ),
   'garamond' => array(
-    'normal' => $fontDir . '/Garamond',
-    'bold' => $fontDir . '/Garamond',
-    'italic' => $fontDir . '/Garamond',
-    'bold_italic' => $fontDir . '/Garamond',
+    'normal' => $fontDir . '/GARA',
+    'bold' => $fontDir . '/GARAbd',
+    'italic' => $fontDir . '/GARA',
+    'bold_italic' => $fontDir . '/GARA',
   ),
 ) ?>
