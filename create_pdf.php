@@ -416,7 +416,7 @@ $context = $prices;
 $context['imagePath'] = './images';
 
 // Generate HTML
-$html = $twig->render('page3.twig', $context);
+$html = $twig->render('page7.twig', $context);
 // var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
@@ -424,7 +424,7 @@ if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
     echo $html;die();
 }
 // https://html-online.com/editor/
-file_put_contents('twig.html', $html);
+// file_put_contents('twig.html', $html);
 
 ini_set('max_execution_time', 60);
 // ini_set("memory_limit", "2GB");
