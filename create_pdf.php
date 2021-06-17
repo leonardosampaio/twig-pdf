@@ -416,7 +416,7 @@ $context = $prices;
 $context['imagePath'] = './images';
 
 // Generate HTML
-$html = $twig->render('page7.twig', $context);
+$html = $twig->render('page8.twig', $context);
 // var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
