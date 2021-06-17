@@ -421,11 +421,24 @@ $context['image1'] = 'data:image/png;base64, '.
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e60215f190e3fd7f.png'));
 $context['image2'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_4efe3888f76de3ce.png'));
+$context['image3'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e4f835c134b51d6b.png'));    
 $context['style'] = file_get_contents(__DIR__.'/templates/style.css');
 
 // var_dump($context['style']);die();
 // Generate HTML
-$html = $twig->render('page4.twig', $context);
+
+$page = 1;
+if (isset($argv) && $argv[1])
+{
+    $page = $argv[1];
+}
+if ($_REQUEST && isset($_REQUEST['page']))
+{
+    $page = $_REQUEST['page'];
+}
+
+$html = $twig->render("page$page.twig", $context);
 // var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
