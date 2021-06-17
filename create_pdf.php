@@ -3,11 +3,7 @@ require_once 'vendor/autoload.php';
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-$loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
-$twig = new \Twig\Environment($loader,[]);
-
-// Generate HTML
-$html = $twig->render('price_book.html.twig', [
+$prices = [
     'version'  => '2021 Version 1.01',
     // SKU         Price
     'TPA0308C' => 265.42,
@@ -411,15 +407,42 @@ $html = $twig->render('price_book.html.twig', [
     'TPSW3000XLS' => 1075.25,
     'TPSW3200XLS' => 683.1,
     'TPSW4000XLS' => 1564.7475,
-    'TPSW4200XLS' => 1067.2805
-]);
+    'TPSW4200XLS' => 1067.2805];
+
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
+$twig = new \Twig\Environment($loader,[]);
+
+$context = $prices;
+$context['imagePath'] = './images';
+
+// Generate HTML
+$html = $twig->render('page3.twig', $context);
+// var_dump(getcwd().'/images');die();
+
+if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
+{
+    echo $html;die();
+}
+// https://html-online.com/editor/
+file_put_contents('twig.html', $html);
+
+ini_set('max_execution_time', 60);
+// ini_set("memory_limit", "2GB");
+error_reporting(E_ALL);
 
 // Convert HTML to PDF
 $options = new Options();
 $options->set('defaultFont', 'Garmond');
+$options->set('enable_remote', true);
+// $options->setDpi(300);
 $dompdf = new Dompdf($options);
+// $dompdf->loadHtmlFile('twig.html');
 $dompdf->loadHtml($html);
-$dompdf->setPaper('letter', 'portrait');
+$dompdf->setPaper('A4', 'portrait');
 
 $dompdf->render();
-file_put_contents("output.pdf",$dompdf->output());
+file_put_contents("output.pdf", $dompdf->output());
+
+// header('Content-type: application/pdf');
+// echo file_get_contents("output.pdf");
+
