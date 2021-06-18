@@ -7,7 +7,6 @@ tr {
 }
 td {
     margin: 0;
-    {# border: 1px solid; #}
 }
 @font-face {
     font-family: "Garamond";           
@@ -58,4 +57,15 @@ h4 {
 }
 page_break {
     page-break-before: always;
+}
+.gray {
+    background-color: #d9d9d9;
+}
+.shadow {
+    box-shadow: 10px 10px 6px #222;
+}
+.header {
+    color: #7030a0;
+    font-weight: bold;
+    text-decoration: underline;
 }
