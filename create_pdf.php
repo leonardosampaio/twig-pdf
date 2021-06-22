@@ -417,6 +417,8 @@ $loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
 $twig = new \Twig\Environment($loader,[]);
 
 $context = $prices;
+$context['style'] = file_get_contents(__DIR__.'/templates/style.css');
+
 $context['image1'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e60215f190e3fd7f.png'));
 $context['image2'] = 'data:image/png;base64, '. 
@@ -427,9 +429,10 @@ $context['image4'] = 'data:image/png;base64, '.
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e9b063ec3e818fd6.png'));    
 $context['image5'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a607c5e358cf4419.png'));    
-$context['style'] = file_get_contents(__DIR__.'/templates/style.css');
-
-
+$context['image6'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_79ff85c4317f162c.png'));    
+$context['image7'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a9d55802d73890f1.png'));    
 
 // var_dump($context['style']);die();
 // Generate HTML
