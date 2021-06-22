@@ -434,6 +434,16 @@ $context['image6'] = 'data:image/png;base64, '.
 $context['image7'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a9d55802d73890f1.png'));    
 
+//7
+$context['image8'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_30dacdddd9b3ab72.png'));
+$context['image9'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_709743d4813d4c92.png'));
+$context['image10'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_f7e25e28b74193ca.png'));
+$context['image11'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_2fcb1c7ec2603fd1.png'));
+
 // var_dump($context['style']);die();
 // Generate HTML
 

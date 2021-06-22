@@ -1,66 +1,40 @@
 <html>
 <head>
 <style type="text/css">
-@page {
-    margin-top: 0cm;
-    margin-left: 0cm;
+{{style}}
+.title {
+    font-size:24px;
 }
-tr {
-    margin: 0;
+.image8 {
+    width: 200%;
+}
+.image9 {
+    width: 200%;
+}
+.image10 {
+    width: 200%;
+}
+.image11 {
+    width: 200%;
 }
 td {
-    margin: 0;
-    {# border: 1px solid; #}
-}
-@font-face {
-    font-family: "Garamond";           
-    src: local("Garamond"), url("fonts/Garamond Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-
-}
-body {
-    font-family: Garamond;
-    font-size:12px;
-    margin-top: 3cm;
-    margin-left: 2cm;
-    margin-right: 2cm;
-    margin-bottom: 2cm;
-}
-footer {
-    position: fixed; 
-    bottom: 0cm; 
-    left: 0cm; 
-    right: 0cm;
-    height: 1cm;
-
+    width: 80px;
     text-align: center;
+    vertical-align: middle;
+    padding: 0;
 }
-h1 {
-    text-transform:uppercase;
-    text-align:center;
-    font-size:24px;
-    margin: 0;
+table {
+    border-spacing: 0;
 }
-h2 {
-    font-size:20px;
-    margin: 0;
+.second_title {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: bold;
+    padding-top: 5px;
 }
-h3 {
-    font-size:18px;
-    margin: 0;
-}
-h4 {
-    font-size:16px;
-    margin: 0;
-
-}
-.page_level
-{
-    color: #7030a0;
-}
-page_break {
-    page-break-before: always;
+.title_padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 </style>
 </head>
@@ -69,16 +43,16 @@ page_break {
 <tbody>
 
 <tr>
-<td colspan="5">Puppy Picket Style Iron Fence</td><td> </td><td colspan=2>imagem</td>
+<td colspan="5" class="title page_level left title1"><b><u>Puppy Picket Style Iron Fence</u></b></td><td colspan=2 rowspan=5><center><img class="image8" src="{{image8}}"><center></td>
 </tr>
 
 <tr>
-<td colspan="7">Traditional Grade Fence Panels</td>
+<td colspan="3" class="second_title">Traditional Grade Fence Panels</td>
 </tr>
 <tr>
-<td>Size</td>
-<td>SKU</td>
-<td>Price</td>
+<td class="header">Size</td>
+<td class="header">SKU</td>
+<td class="header">Price</td>
 </tr>
 <tr>
 <td>4'h x 8'w</td>
@@ -86,65 +60,70 @@ page_break {
 <td>235,29</td>
 </tr>
 <tr>
-<td>5'h x 8'w</td>
-<td>TP0508PPR</td>
-<td>269,95</td>
+<td class="gray">5'h x 8'w</td>
+<td class="gray">TP0508PPR</td>
+<td class="gray">269,95</td>
 </tr>
 
 <tr>
-<td colspan="3">Traditional Grade Single Gates</td><td> </td><td colspan="3">Traditional Grade Double Gates</td>
+<td colspan="3" class="second_title">Traditional Grade Single Gates</td><td class="td_space"> </td><td colspan="3" class="second_title">Traditional Grade Double Gates</td>
 </tr>
 <tr>
-<td>Size</td>
-<td>SKU</td>
-<td>Price</td><td> </td><td>Size</td>
-<td>SKU</td>
-<td>Price</td>
+<td class="header">Size</td>
+<td class="header">SKU</td>
+<td class="header">Price</td><td class="td_space"> </td><td class="header">Size</td>
+<td class="header">SKU</td>
+<td class="header">Price</td>
 </tr>
 <tr>
 <td>4'h x 4'w</td>
 <td>TPG44PPR</td>
-<td>479,16</td><td> </td><td>4'h x 8'w</td>
+<td>479,16</td><td class="td_space"> </td><td>4'h x 8'w</td>
 <td>TPG44PPRD</td>
 <td>958,32</td>
 </tr>
 <tr>
-<td>4'h x 5'w</td>
-<td>TPG45PPR</td>
-<td>532,4</td><td> </td><td>4'h x 10'w</td>
-<td>TPG45PPRD</td>
-<td>1064,8</td>
+<td class="gray">4'h x 5'w</td>
+<td class="gray">TPG45PPR</td>
+<td class="gray">532,4</td>
+<td class="td_space"> </td>
+<td class="gray">4'h x 10'w</td>
+<td class="gray">TPG45PPRD</td>
+<td class="gray">1064,8</td>
 </tr>
 <tr>
 <td>5'h x 4'w</td>
 <td>TPG54PPR</td>
-<td>559,02</td><td> </td><td>5'h x 8'w</td>
+<td>559,02</td>
+<td class="td_space"> </td>
+<td>5'h x 8'w</td>
 <td>TPG54PPRD</td>
 <td>1118,04</td>
 </tr>
 <tr>
-<td>5'h x 5'w</td>
-<td>TPG55PPR</td>
-<td>612,26</td><td> </td><td>5'h x 10'w</td>
-<td>TPG55PPRD</td>
-<td>1224,52</td>
+<td class="gray">5'h x 5'w</td>
+<td class="gray">TPG55PPR</td>
+<td class="gray">612,26</td>
+<td class="td_space"> </td>
+<td class="gray">5'h x 10'w</td>
+<td class="gray">TPG55PPRD</td>
+<td class="gray">1224,52</td>
 </tr>
 
 
 <tr>
-<td colspan="5">Hoop and Picket Style Iron Fence</td><td colspan=2>imagem</td>
-</tr>
-
-<tr>
-<td> </td>
+<td colspan="6" class="title page_level left title_padding"><b><u>Hoop and Picket Style Iron Fence</u></b></td><td colspan=1 rowspan=6><img class="image9" src="{{image9}}"></td>
 </tr>
 <tr>
-<td colspan="3">Traditional Grade Fence Panels</td>
+<td class="td_space"> </td>
 </tr>
 <tr>
-<td>Size</td>
-<td>SKU</td>
-<td>Price</td>
+<td colspan="3" class="second_title">Traditional Grade Fence Panels</td>
+</tr>
+<tr>
+<td class="header">Size</td>
+<td class="header">SKU</td>
+<td class="header">Price</td>
 </tr>
 <tr>
 <td>3'h x 8'w</td>
@@ -152,53 +131,57 @@ page_break {
 <td>193,51</td>
 </tr>
 <tr>
-<td>4'h x 8'w</td>
-<td>TP0408HP</td>
-<td>207,68</td>
+<td class="gray">4'h x 8'w</td>
+<td class="gray">TP0408HP</td>
+<td class="gray">207,68</td>
 </tr>
 <tr>
-<td> </td>
+<td class="td_space"> </td>
 </tr>
 <tr>
-<td colspan="3">Traditional Grade Single Gates</td><td> </td><td colspan="3">Traditional Grade Double Gates</td>
+<td colspan="3" class="second_title">Traditional Grade Single Gates</td><td class="td_space"> </td><td colspan="3" class="second_title">Traditional Grade Double Gates</td>
 </tr>
 <tr>
-<td>Size</td>
-<td>SKU</td>
-<td>Price</td><td> </td><td>Size</td>
-<td>SKU</td>
-<td>Price</td>
+<td class="header">Size</td>
+<td class="header">SKU</td>
+<td class="header">Price</td><td class="td_space"> </td><td class="header">Size</td>
+<td class="header">SKU</td>
+<td class="header">Price</td>
 </tr>
 <tr>
 <td>3'h x 4'w</td>
 <td>TP0304HPG</td>
-<td>320,86</td><td> </td><td>3'h x 8'w</td>
+<td>320,86</td><td class="td_space"> </td><td>3'h x 8'w</td>
 <td>TP0304HPGD</td>
 <td>641,72</td>
 </tr>
 <tr>
-<td>3'h x 5'w</td>
-<td>TP0305HPG</td>
-<td>330,97</td><td> </td><td>3'h x 10'w</td>
-<td>TP0305HPGD</td>
-<td>661,94</td>
+<td class="gray">3'h x 5'w</td>
+<td class="gray">TP0305HPG</td>
+<td class="gray">330,97</td>
+<td class="td_space"> </td>
+<td class="gray">3'h x 10'w</td>
+<td class="gray">TP0305HPGD</td>
+<td class="gray">661,94</td>
 </tr>
 <tr>
 <td>4'h x 4'w</td>
 <td>TP0404HPG</td>
-<td>330,97</td><td> </td><td>4'h x 8'w</td>
+<td>330,97</td><td class="td_space"> </td><td>4'h x 8'w</td>
 <td>TP0404HPGD</td>
 <td>661,94</td>
 </tr>
 <tr>
-<td>4'h x 5'w</td>
-<td>TP0405HPG</td>
-<td>361,32</td><td> </td><td>4'h x 10'w</td>
-<td>TP0405HPGD</td>
-<td>722,63</td>
+<td class="gray">4'h x 5'w</td>
+<td class="gray">TP0405HPG</td>
+<td class="gray">361,32</td>
+<td class="td_space"> </td>
+<td class="gray">4'h x 10'w</td>
+<td class="gray">TP0405HPGD</td>
+<td class="gray">722,63</td>
 </tr>
 <tr>
-<td colspan=3>imagem</td><td> </td><td  colspan=3>imagem</td>
+<td colspan=3><img class="image10 border" src="{{image10}}"></td><td class="td_space"> </td><td  colspan=3><img class="image11 border" src="{{image11}}"></td>
 </tr>
 </tbody>
 </table>

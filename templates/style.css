@@ -75,3 +75,6 @@ page_break {
 .left {
     text-align: left;
 }
+.border {
+    border: 1px solid black;
+}
