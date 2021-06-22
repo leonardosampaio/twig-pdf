@@ -69,3 +69,9 @@ page_break {
     font-weight: bold;
     text-decoration: underline;
 }
+.td_space {
+    width: 20px;
+}
+.left {
+    text-align: left;
+}
