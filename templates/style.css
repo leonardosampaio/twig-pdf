@@ -70,6 +70,7 @@ page_break {
     text-decoration: underline;
 }
 .td_space {
+    color: white;
     width: 20px;
 }
 .left {
