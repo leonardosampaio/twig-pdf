@@ -1,7 +1,13 @@
-download load_font.php and place it to the root directory of your project: curl -o load_font.php https://raw.githubusercontent.com/dompdf/utils/master/load_font.php
+# Instructions
 
-then open load_font.php with your editor and place the correct path to your autoload.inc.php, eg require_once 'lib/dompdf/autoload.inc.php';
+1. Install PHP 7.4, PHP GD and Ghostscript
 
-Open the command line, go to the root folder of your project, and run the utility with the name of the font you are registering and the path to the TFF file eg php load_font.php SourceSansPro ./pathToYourFolder/lib/dompdf/SourceSansPro-Regular.ttf ./pathToYourFolder/lib/dompdf/SourceSansPro-Bold.ttf
+    sudo apt get install php7.4 php7.4-gd gs
 
-php load_font.php Garamond 'fonts/Garamond Regular.ttf' 'fonts/Garamond Bold font.ttf'
+2. Install Garamond font with 
+
+    php load_font.php Garamond fonts/GARA.TTF
+
+3. Run script in cli and check output.pdf
+
+    php create_pdf.php
