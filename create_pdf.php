@@ -505,6 +505,31 @@ $context['image26'] = 'data:image/png;base64, '.
 $context['image27'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_b9c5da01086bdde3.png'));
 
+//17
+$context['image28'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_61fcc76343235735.png'));
+$context['image29'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_519e11dcbf5b06c8.png'));
+$context['image30'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_fc685f70a3b195e1.png'));
+
+//18
+$context['image31'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_353d1261c5e48eab.png'));
+$context['image32'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_85884d04b9e32a4d.png'));
+
+//19
+$context['image33'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_cc536c9b2400bb33.png'));
+
+//20
+$context['image34'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_2cfb58438f89e78c.png'));
+$context['image35'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_212ba16a48264d15.png'));
+$context['image36'] = 'data:image/png;base64, '. 
+    base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a910215661acb990.png'));
 
 // var_dump($context['style']);die();
 // Generate HTML

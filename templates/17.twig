@@ -3,15 +3,6 @@
 <style type="text/css">
 {{style}}
 td {
-    border: 1px solid black;
-}
-.second_title {
-    font-size: 14px;
-    text-decoration: underline;
-    font-weight: bold;
-    padding-top: 5px;
-}
-td {
     width: 110px;
     text-align: center;
     vertical-align: middle;
@@ -20,20 +11,20 @@ td {
 table {
     border-spacing: 0;
 }
-.image17 {
-    width: 270%;
+.image28 {
+    width: 100%;
 }
-.image18 {
-    width: 200%;
+.image29 {
+    width: 100%;
 }
-.image19 {
-    width: 200%;
+.image30 {
+    width: 100%;
 }
-.title {
-    font-size:24px;
-}
-.tr_images {
+.td_images {
     padding-top: 20px;
+}
+.td_images_29_30 {
+    padding-left: 10px;
 }
 </style>
 </head>
@@ -63,38 +54,38 @@ table {
 <tr>
 <td>2"</td>
 <td>TP06004-ALBH</td>
-<td>$3,95</td>
+<td>{{TP06004ALBH}}</td><!--TP06004-ALBH not defined-->
 <td> </td>
 <td>2"</td>
 <td>TP05009-ALBH</td>
-<td>$7,91</td>
+<td>{{TP05009ALBH}}</td><!--TP05009-ALBH not defined-->
 </tr>
 <tr>
 <td class="gray">2.5"</td>
 <td class="gray">TP06010-ALBH</td>
-<td class="gray">$4,53</td>
+<td class="gray">{{TP06010ALBH}}</td><!--TP06010-ALBH not defined-->
 <td> </td>
 <td class="gray">2.5"</td>
 <td class="gray">TP05010-ALBH</td>
-<td class="gray">$9,05</td>
+<td class="gray">{{TP05010ALBH}}</td><!--TP05010-ALBH not defined-->
 </tr>
 <tr>
 <td>4"</td>
 <td>TP06006-ALBH</td>
-<td>$17,00</td>
+<td>{{TP06006ALBH}}</td>
 <td> </td>
 <td>4"</td>
 <td>TP05012-ALBH</td>
-<td>$33,95</td>
+<td>{{TP05012ALBH}}</td>
 </tr>
 <tr>
 <td class="gray">6"</td>
 <td class="gray">TP06007-ALBH</td>
-<td class="gray">$27,16</td>
+<td class="gray">{{TP06007ALBH}}</td>
 <td> </td>
 <td class="gray">6"</td>
 <td class="gray">TP05014-ALBH</td>
-<td class="gray">$45,25</td>
+<td class="gray">{{TP05014ALBH}}</td>
 </tr>
 <tr>
 <td colspan=7 class="td_space">&nbsp;</td>
@@ -116,29 +107,29 @@ table {
 <tr>
 <td>Wall/ Flex</td>
 <td>TPAFBRR1</td>
-<td>$4,53</td>
+<td>{{TPAFBRR1}}</td>
 <td> </td>
 <td>Wall/ Flex</td>
 <td>TPAFBRC3</td>
-<td>$6,80</td>
+<td>{{TPAFBRC3}}</td>
 </tr>
 <tr>
 <td class="gray">Angle</td>
 <td class="gray">TPAFBAR2</td>
-<td class="gray">$4,53</td>
+<td class="gray">{{TPAFBAR2}}</td>
 <td> </td>
 <td class="gray">Angle</td>
 <td class="gray">TPAFBRC4</td>
-<td class="gray">$6,80</td>
+<td class="gray">{{TPAFBRC4}}</td>
 </tr>
 <tr>
 <td>Swivel</td>
 <td>NW61955BKR</td>
-<td>$8,23</td>
+<td>{{NW61955BKR}}</td>
 <td> </td>
 <td>Swivel</td>
 <td>NW6228BKC</td>
-<td>$8,23</td>
+<td>{{NW6228BKC}}</td>
 </tr>
 <tr>
 <td colspan=7 class="td_space">&nbsp;</td>
@@ -160,21 +151,23 @@ table {
 <tr>
 <td>1" x #8</td>
 <td>TPSDS108</td>
-<td>$9,05</td>
+<td>{{TPSDS108}}</td>
 <td> </td>
 <td>2"</td>
 <td>TP12208B</td>
-<td>$13,59</td>
+<td>{{TP12208B}}</td>
 </tr>
 <tr>
 <td colspan=4> </td>
 <td class="gray">2.5"</td>
 <td class="gray">TP12209B</td>
-<td class="gray">$13,59</td>
+<td class="gray">{{TP12209B}}</td>
 </tr>
 <tr>
-<td colspan=4>imagem</td>
-<td colspan=3>imagem<br>imagem</td>
+<tr>
+</tr>
+<td colspan=4 class="td_images"><img class="image28 border" src="{{image28}}"></td>
+<td colspan=3 class="td_images td_images_29_30"><img class="image29 border" src="{{image29}}"><br><img class="image30 border" src="{{image30}}"></td>
 </tr>
 </tbody>
 </table>
