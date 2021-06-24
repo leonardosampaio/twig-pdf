@@ -3,16 +3,7 @@
 <style type="text/css">
 {{style}}
 td {
-    border: 1px solid black;
-}
-.second_title {
-    font-size: 14px;
-    text-decoration: underline;
-    font-weight: bold;
-    padding-top: 5px;
-}
-td {
-    width: 110px;
+    width: 90px;
     text-align: center;
     vertical-align: middle;
     padding: 0;
@@ -20,19 +11,16 @@ td {
 table {
     border-spacing: 0;
 }
-.image17 {
-    width: 270%;
+.image34 {
+    width: 180%;
 }
-.image18 {
+.image35 {
     width: 200%;
 }
-.image19 {
-    width: 200%;
+.image36 {
+    width: 250%;
 }
-.title {
-    font-size:24px;
-}
-.tr_images {
+.td_images {
     padding-top: 20px;
 }
 </style>
@@ -40,6 +28,7 @@ table {
 <body>
 <table>
 <tbody>
+<tr>
 <td colspan="7" class="title page_level left"><b><u>
 Add-On Decorations</u></b></td>
 </tr>
@@ -68,7 +57,7 @@ Add-On Decorations</u></b></td>
 <td>Traditional</td>
 <td>Butterfly</td>
 <td>TP12010-BH</td>
-<td>$2,27</td>
+<td>{{TP12010BH}}</td>
 <td>3.625"</td>
 <td>3.75"</td>
 <td> </td>
@@ -77,7 +66,7 @@ Add-On Decorations</u></b></td>
 <td class="gray">Signature</td>
 <td class="gray">Butterfly</td>
 <td class="gray">TP12010-2BH</td>
-<td class="gray">$2,27</td>
+<td class="gray">{{TP120102BH}}</td>
 <td class="gray">3.625"</td>
 <td class="gray">3.75"</td>
 <td> </td>
@@ -89,7 +78,7 @@ Add-On Decorations</u></b></td>
 <td>Traditional</td>
 <td>Ring Set</td>
 <td>TPDRA01R</td>
-<td>$6,80</td>
+<td>{{TPDRA01R}}</td>
 <td>3.75"</td>
 <td>12.875"</td>
 <td> </td>
@@ -98,7 +87,7 @@ Add-On Decorations</u></b></td>
 <td class="gray">Signature</td>
 <td class="gray">Ring Set</td>
 <td class="gray">TPDRA01C</td>
-<td class="gray">$6,80</td>
+<td class="gray">{{TPDRA01C}}</td><!--TPDRA01C not defined-->
 <td class="gray">3.75"</td>
 <td class="gray">12.875"</td>
 <td> </td>
@@ -110,7 +99,7 @@ Add-On Decorations</u></b></td>
 <td>Traditional</td>
 <td>Guardian</td>
 <td>TP12001-BH</td>
-<td>$16,94</td>
+<td>{{TP12001BH}}</td>
 <td>16.5"</td>
 <td>6.75"</td>
 <td> </td>
@@ -119,7 +108,7 @@ Add-On Decorations</u></b></td>
 <td class="gray">Signature</td>
 <td class="gray">Guardian</td>
 <td class="gray">TP12001-2BH</td>
-<td class="gray">$16,94</td>
+<td class="gray">{{TP120012BH}}</td>
 <td class="gray">16.5"</td>
 <td class="gray">6.75"</td>
 <td> </td>
@@ -131,7 +120,7 @@ Add-On Decorations</u></b></td>
 <td>Traditional</td>
 <td>Cape Cod</td>
 <td>TP12004-BH</td>
-<td>$16,94</td>
+<td>{{TP12004BH}}</td>
 <td>13.75"</td>
 <td>7.25"</td>
 <td> </td>
@@ -140,7 +129,7 @@ Add-On Decorations</u></b></td>
 <td class="gray">Signature</td>
 <td class="gray">Cape Cod</td>
 <td class="gray">TP12004-2BH</td>
-<td class="gray">$16,94</td>
+<td class="gray">{{TP120042BH}}</td>
 <td class="gray">13.75"</td>
 <td class="gray">7.25"</td>
 <td> </td>
@@ -152,7 +141,7 @@ Add-On Decorations</u></b></td>
 <td>Traditional</td>
 <td>Oak</td>
 <td>TP12002-BH</td>
-<td>$20,24</td>
+<td>{{TP12002BH}}</td>
 <td>15.125"</td>
 <td>7.875"</td>
 <td> </td>
@@ -161,7 +150,7 @@ Add-On Decorations</u></b></td>
 <td class="gray">Signature</td>
 <td class="gray">Oak</td>
 <td class="gray">TP12002-2BH</td>
-<td class="gray">$20,24</td>
+<td class="gray">{{TP120022BH}}</td>
 <td class="gray">15.125"</td>
 <td class="gray">7.875"</td>
 <td> </td>
@@ -185,29 +174,31 @@ Add-On Decorations</u></b></td>
 <tr>
 <td>1/2" x #8</td>
 <td>TPSDS058</td>
-<td>$12,67</td>
+<td>{{TPSDS058}}</td>
 <td>100/ Box</td>
 <td colspan="3">For Ring Decorations Only</td>
 </tr>
 <tr>
 <td class="gray">3/4" x #8</td>
 <td class="gray">TPSDS348</td>
-<td class="gray">$12,67</td>
+<td class="gray">{{TPSDS348}}</td>
 <td class="gray">100/ Box</td>
 <td colspan="3" class="gray">For All Decorations Except Rings</td>
 </tr>
 <tr>
 <td>1" x #8</td>
 <td>TPSDS108P</td>
-<td>$12,67</td>
+<td>{{TPSDS108P}}</td>
 <td>100/ Box</td>
 <td colspan="3">For Signature Butterfies</td>
 </tr>
 <tr>
-<td colspan=7>imagem1 imagem2</td>
+<td colspan=3 class="td_images"><img class="image34 border" src="{{image34}}"></td>
+<td class="td_space">&nbsp;</td>
+<td colspan=3 class="td_images"><img class="image35 border" src="{{image35}}"></td>
 </tr>
 <tr>
-<td colspan=7>imagem3</td>
+<td colspan=7 class="td_images"><img class="image36 border" src="{{image36}}"></td>
 </tr>
 </tbody>
 </table>
