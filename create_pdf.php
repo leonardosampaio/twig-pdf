@@ -482,7 +482,7 @@ if ($_REQUEST && isset($_REQUEST['page']))
     $page = $_REQUEST['page'];
 }
 
-$html = $twig->render("page$page.twig", $context);
+$html = $twig->render("$page.twig", $context);
 // var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
