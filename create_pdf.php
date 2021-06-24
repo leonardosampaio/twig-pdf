@@ -441,16 +441,23 @@ $context['version']  = '2021 Version 1.01';
 
 $context['style'] = file_get_contents(__DIR__.'/templates/style.css');
 
+//1
 $context['image1'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e60215f190e3fd7f.png'));
+    
+//2    
 $context['image2'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_4efe3888f76de3ce.png'));
+
+//5
 $context['image3'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e4f835c134b51d6b.png'));
 $context['image4'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_e9b063ec3e818fd6.png'));    
 $context['image5'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a607c5e358cf4419.png'));    
+
+//6
 $context['image6'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_79ff85c4317f162c.png'));    
 $context['image7'] = 'data:image/png;base64, '. 
