@@ -507,7 +507,8 @@ $dompdf->loadHtml($html);
 $dompdf->setPaper('letter', 'portrait');
 
 $dompdf->render();
-file_put_contents("output.pdf", $dompdf->output());
+// file_put_contents("output.pdf", $dompdf->output());
+file_put_contents("preview/$page.pdf", $dompdf->output());
 
 // header('Content-type: application/pdf');
 // echo file_get_contents("output.pdf");
