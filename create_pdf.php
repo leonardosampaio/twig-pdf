@@ -501,7 +501,7 @@ $context['image25'] = 'data:image/png;base64, '.
 $context['image26'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_b3da0b4150730cf8.png'));
 
-//15
+//15 and 16
 $context['image27'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_b9c5da01086bdde3.png'));
 
