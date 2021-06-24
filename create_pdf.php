@@ -1,5 +1,10 @@
 <?php
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+ini_set('max_execution_time', 60);
+
 require_once 'vendor/autoload.php';
+
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
@@ -531,12 +536,7 @@ $context['image35'] = 'data:image/png;base64, '.
 $context['image36'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a910215661acb990.png'));
 
-// var_dump($context['style']);die();
-// Generate HTML
-
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
-$page = 1;
+$page = '01';
 if (isset($argv) && $argv[1])
 {
     $page = $argv[1];
@@ -547,33 +547,23 @@ if ($_REQUEST && isset($_REQUEST['page']))
 }
 
 $html = $twig->render("$page.twig", $context);
-// var_dump(getcwd().'/images');die();
 
 if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
 {
     echo $html;die();
 }
-// https://html-online.com/editor/
-// file_put_contents('twig.html', $html);
 
-ini_set('max_execution_time', 60);
-// ini_set("memory_limit", "2GB");
-error_reporting(E_ALL);
+echo "Rendering page $page" . PHP_EOL;
 
-// Convert HTML to PDF
 $options = new Options();
 $options->set('defaultFont', 'Garmond');
 $options->set('enable_remote', true);
-// $options->setDpi(300);
+
 $dompdf = new Dompdf($options);
-// $dompdf->loadHtmlFile('twig.html');
 $dompdf->loadHtml($html);
 $dompdf->setPaper('letter', 'portrait');
 
 $dompdf->render();
-// file_put_contents("output.pdf", $dompdf->output());
 file_put_contents("preview/$page.pdf", $dompdf->output());
 
-// header('Content-type: application/pdf');
-// echo file_get_contents("output.pdf");
-
+echo "Done" . PHP_EOL;
