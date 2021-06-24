@@ -93,3 +93,12 @@ page_break {
 .center {
     text-align: center;
 }
+.title {
+    font-size:24px;
+}
+.second_title {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: bold;
+    padding-top: 5px;
+}
