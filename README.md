@@ -13,3 +13,5 @@
 4. Run script in cli and check output.pdf
 
     php create_pdf.php
+
+Tested with ubuntu-20.04.2.0-desktop-amd64
