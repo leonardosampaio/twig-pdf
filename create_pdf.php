@@ -416,6 +416,17 @@ $prices = [
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
 $twig = new \Twig\Environment($loader,[]);
 
+foreach($prices as $k => $v)
+{
+    //if needed, round numbers here
+    // $v = round($v, 2);
+    if (strpos($k,'-')!==false)
+    {
+        unset($prices[$k]);
+        $prices[str_replace('-','',$k)] = '$'.$v;
+    }
+}
+
 $context = $prices;
 $context['style'] = file_get_contents(__DIR__.'/templates/style.css');
 
