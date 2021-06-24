@@ -420,10 +420,14 @@ foreach($prices as $k => $v)
 {
     //if needed, round numbers here
     // $v = round($v, 2);
+    $v = '$' . $v;
     if (strpos($k,'-')!==false)
     {
         unset($prices[$k]);
-        $prices[str_replace('-','',$k)] = '$'.$v;
+        $prices[str_replace('-','',$k)] = $v;
+    }
+    else {
+        $prices[$k] = $v;
     }
 }
 
