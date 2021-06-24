@@ -9,7 +9,6 @@ use Dompdf\Dompdf;
 use Dompdf\Options;
 
 $prices = [
-    'version'  => '2021 Version 1.01',
     // SKU         Price
     'TPA0308C' => 265.42,
     'TPA0308C-6' => 208.173,
@@ -437,6 +436,9 @@ foreach($prices as $k => $v)
 }
 
 $context = $prices;
+
+$context['version']  = '2021 Version 1.01';
+
 $context['style'] = file_get_contents(__DIR__.'/templates/style.css');
 
 $context['image1'] = 'data:image/png;base64, '. 
