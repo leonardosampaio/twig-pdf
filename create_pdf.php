@@ -545,34 +545,35 @@ $context['image35'] = 'data:image/png;base64, '.
 $context['image36'] = 'data:image/png;base64, '. 
     base64_encode(file_get_contents(__DIR__.'/libreoffice/PDF Source_html_a910215661acb990.png'));
 
-$page = '01';
-if (isset($argv) && $argv[1])
-{
-    $page = $argv[1];
+$templatesDir = __DIR__.'/templates/';
+
+$files = scandir($templatesDir);
+
+foreach($files as $file) {
+
+    if (strpos($file,'.twig')===false)
+    {
+        continue;
+    }
+
+    $html = $twig->render($file, $context);
+
+    echo "Rendering $file" . PHP_EOL;
+
+    $options = new Options();
+    $options->set('defaultFont', 'Garmond');
+    $options->set('enable_remote', true);
+    
+    $dompdf = new Dompdf($options);
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('letter', 'portrait');
+
+    $dompdf->render();
+    file_put_contents("preview/$file.pdf", $dompdf->output());
+    
+    echo "Done" . PHP_EOL;
 }
-if ($_REQUEST && isset($_REQUEST['page']))
-{
-    $page = $_REQUEST['page'];
-}
 
-$html = $twig->render("$page.twig", $context);
+exec("gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=output.pdf preview/*.pdf");
 
-if (isset($_REQUEST['output']) && $_REQUEST['output']=='html')
-{
-    echo $html;die();
-}
-
-echo "Rendering page $page" . PHP_EOL;
-
-$options = new Options();
-$options->set('defaultFont', 'Garmond');
-$options->set('enable_remote', true);
-
-$dompdf = new Dompdf($options);
-$dompdf->loadHtml($html);
-$dompdf->setPaper('letter', 'portrait');
-
-$dompdf->render();
-file_put_contents("preview/$page.pdf", $dompdf->output());
-
-echo "Done" . PHP_EOL;
+echo "Check " . __DIR__. "/output.pdf";
