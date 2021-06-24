@@ -413,10 +413,19 @@ $prices = [
     'TPSW4000XLS' => 1564.7475,
     'TPSW4200XLS' => 1067.2805];
 
-    //font download
-    // https://www.wfonts.com/font/garamond
-    //https://stackoverflow.com/questions/24412203/dompdf-and-set-different-font-family/44807562
-    //sudo apt install php7.4-gd
+// Undefined:
+
+// TP66010
+// TP06004-ALBH
+// TP05009-ALBH
+// TP06010-ALBH
+// TP05010-ALBH
+// TP-OM_BL-K
+// TP09010B
+// TPFM3100MBC
+// TPFM3101MBC
+// TPDRA01C
+
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
 $twig = new \Twig\Environment($loader,[]);
 

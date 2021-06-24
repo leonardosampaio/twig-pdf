@@ -1,4 +1,6 @@
-# Instructions
+# Twig report
+
+## Instructions
 
 1. Install PHP 7.4.20 (ppa:ondrej/php), PHP GD, PHP XML, Composer and Ghostscript
 
@@ -6,7 +8,7 @@
 
 2. Do composer update
 
-3. Install Garamond (https://stackoverflow.com/a/45977159) font with 
+3. Install Garamond (https://stackoverflow.com/a/45977159) font (https://www.wfonts.com/font/garamond) with 
 
     php load_font.php Garamond fonts/GARA.TTF
 
