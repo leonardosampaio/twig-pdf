@@ -574,6 +574,8 @@ foreach($files as $file) {
     echo "Done" . PHP_EOL;
 }
 
+echo "Joining files" . PHP_EOL;
 exec("gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=output.pdf preview/*.pdf");
+echo "Done" . PHP_EOL;
 
 echo "Check " . __DIR__. "/output.pdf";
